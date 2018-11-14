@@ -1,0 +1,219 @@
+{% extends "layout.html" %}
+
+{% block header_scripts %}
+	<link rel="stylesheet" type="text/css" href="/css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+{% endblock %}
+
+{% block content %}
+	{% include 'partials/home-banner.html' %}
+
+	{% include 'partials/news.html' %}
+
+	{% include 'partials/articles.html' %}
+
+	{% import 'macros/divider.html' as divider %} {{ divider.params('“今ある課題”の解決に「ITAS」の力を', 'itas') }}
+
+	{% include 'partials/itas.html' %}
+
+	{% import 'macros/divider.html' as divider %} {{ divider.params('「不満買取センター」のデータでマーケティングを“生活者起点”に', 'discontent-data') }}
+
+	{% include 'partials/dissatisfaction-data.html' %}
+
+	{% import 'macros/divider.html' as divider %} {{ divider.params('「ITAS」 を進化させる産学連携', 'academia-collaboration') }}
+
+	{% include 'partials/academia-collaboration.html' %}
+
+	{% import 'macros/divider.html' as divider %} {{ divider.params('課題解決事例', 'case-study') }}
+
+	{% include 'partials/case-study.html' %}
+
+	{% import 'macros/divider.html' as divider %} {{ divider.params('明日を切り拓く、我々でありたい。', 'team') }}
+
+	{% include 'partials/team.html' %}
+
+	{% import 'macros/divider.html' as divider %} {{ divider.params('会社概要', 'company-profile') }}
+
+	{% include 'partials/company-profile.html' %}
+{% endblock %}
+
+{% block footer_scripts %}
+	<script src="/js/owl.carousel.min.js"></script>
+	<script src="/js/waypoints.min.js"></script>
+	<script src="/js/jquery.counterup.min.js"></script>
+	<script type="text/javascript">
+		function calc_itas() {
+			var height = []
+			
+			$('.itas .item').each(function(e) {
+				height.push($(this).find('.item-container').outerHeight())
+			}).css('height', Math.max(...height))
+			
+			$('.itas .item .item-container').css('max-height', Math.max(...height))
+		}
+
+		function calc_academia() {
+			if ($(window).width() > 991) {
+				var height = []
+
+				$('.academia-collaboration .items > li').each(function(e) {
+					height.push($(this).outerHeight())
+				}).css('min-height', Math.max(...height))
+			} else {
+				$('.academia-collaboration .items > li').css('min-height', 'auto')
+			}
+		}
+
+		$(document).ready(function() {
+			// smooth scroll
+            $('#headerNav a').on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault()
+
+                    var hash = this.hash
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+                        window.location.hash = hash;
+                    })
+                }
+            })
+            
+			// parallax
+			$('.divider-parallax-container').parallax({
+				imageSrc: '../assets/images/footer-banner.png'
+			})
+
+			$('.home-banner, .articles').parallax({
+				imageSrc: '../assets/images/footer-banner.png'
+			})
+
+			$('.itas, .dissatisfaction-data, .academia-collaboration, .case-study').parallax({
+				imageSrc: '../assets/images/parallax-bgx.png',
+				iosFix: false,
+				androidFix: false
+			})
+
+			$('.team').parallax({
+				imageSrc: '../assets/images/parallax-bg-2x.png',
+				iosFix: false,
+				androidFix: false
+			})
+
+			// carousel
+			$("#slide-one, #slide-two").owlCarousel({
+				items: 1,
+				autoplay: true,
+				loop: true
+			}).on('click', function(e) {
+				$(this).trigger('next.owl.carousel')
+			})
+
+		    // counter
+			$.ajax({
+				method: 'get',
+				url: 'https://post-api.fumankaitori.com/external/posts/count',
+				xhrFields: {
+					withCredentials: true
+				},
+				cache: true
+			}).done(function(data){
+				$('.count').html(data.valid_count).counterUp({
+		            delay: 10,
+		            time: 1000
+		        })
+			}).fail(function(data){
+				$('.count').counterUp({
+		            delay: 10,
+		            time: 1000
+		        })
+			})
+
+			// itas expand
+			calc_itas()
+
+			$('.itas .item').on('click', 'button', function(e) {
+				e.preventDefault()
+
+				var dom = $(this).parents('.item-container')
+
+				dom.addClass('working')
+
+				setTimeout(function() {
+					dom.removeClass('working')
+				}, 800)
+
+				if (dom.hasClass('active')) {
+					dom.toggleClass('active')
+
+					if (dom.hasClass('active')) {
+						dom.find('.step-one').addClass('d-none')
+						dom.find('.step-two').removeClass('d-none')
+					} else {
+						setTimeout(function() {
+							dom.find('.step-one').removeClass('d-none')
+							dom.find('.step-two').addClass('d-none')
+						}, 800)
+					}
+				} else {
+					// $('.itas .item-container').removeClass('active')
+					var v_dom = $('.itas .item-container.active')
+					v_dom.addClass('working').removeClass('active')
+					setTimeout(function() {
+						v_dom.find('.step-one').removeClass('d-none')
+						v_dom.find('.step-two').addClass('d-none')
+						v_dom.removeClass('working')
+					}, 800)
+
+					dom.toggleClass('active')
+
+					if (dom.hasClass('active')) {
+						dom.find('.step-one').addClass('d-none')
+						dom.find('.step-two').removeClass('d-none')
+					} else {
+						setTimeout(function() {
+							dom.find('.step-one').removeClass('d-none')
+							dom.find('.step-two').addClass('d-none')
+						}, 800)
+					}
+				}
+			})
+
+			// articles
+			var html = ''
+			$.when(
+				$.ajax({
+					method: 'get',
+					url: 'https://d1tjns3er1gt4e.cloudfront.net/corparticles',
+					cache: true
+				})
+			).then(function(articles) {
+				articles.slice(0,3).forEach(function(i) {
+					html += '<a href="http://lab.insight-tech.co.jp/articles/'+i.id+'" target="_blank"><li><span>'+i.categoryKey+'</span><h4>'+i.title+'</h4><p>'+i.subTitle+'</p></li></a>'
+				})
+				$('.articles .items').html(html)
+
+				var height = []
+			
+				$('.articles .items li').each(function(e) {
+					height.push($(this).outerHeight())
+				}).css('min-height', Math.max(...height))
+			}).fail(function(data){
+				alert('fail get lab articles')
+			})
+
+			calc_academia()
+		})
+
+		$(window).on('load', function() {
+			$('#slide-one, #slide-two').trigger('refresh.owl.carousel')
+			calc_academia()
+		})
+
+		$(window).on('resize', function() {
+			calc_itas()
+			calc_academia()
+		})
+	</script>
+{% endblock %}

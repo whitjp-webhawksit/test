@@ -1,0 +1,7 @@
+{% macro params(items) %}
+	<ul class="items list-unstyled">
+		{% for item in items %}
+			<li><a href="{{ item.link }}"><span class="category">{{ item.category }}</span> <span>{{ item.date }}</span> {{ item.content }}</a></li>
+		{% endfor %}
+	</ul>
+{% endmacro %}

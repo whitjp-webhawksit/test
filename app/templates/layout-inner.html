@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="株式会社Insight Techは、最先端のAI技術を駆使して膨大なデータの中から課題解決に役立つ統計的な示唆を抽出します。">
+        <meta name="thumbnail" content="http://insight-tech.co.jp/assets/images/preview.jpg">
+        <meta name="keywords" content="Insight Tech,インサイトテック,AI,ビッグデータ,データ解析,生活者,本音,課題解決,マーケティング">
+        <meta property="og:title" content="AIで課題解決をサポートする株式会社Insight Tech">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="株式会社Insight Techは、最先端のAI技術を駆使して膨大なデータの中から課題解決に役立つ統計的な示唆を抽出します。">
+        <meta property="og:url" content="http://insight-tech.co.jp/">
+        <meta property="og:site_name" content="Insight Tech">
+        <meta property="og:image" content="http://insight-tech.co.jp/assets/images/preview.jpg">
+        <link rel="shortcut icon" href="/assets/images/favicon.ico">
+        <title>Insighttech | {% block title %} {% endblock %}</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="stylesheet" href="/css/style.css">
+
+        {% block header_scripts %} {% endblock %}
+    </head>
+    <body>
+        {% include 'partials/header.html' %}
+        {% block content %} {% endblock %}
+
+        <!-- scroll to top -->
+        <a href="#" class="scrollup"><img src="../assets/images/scrollup.svg" class="img-fluid"></a>
+
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/parallax.min.js"></script>
+
+        <script type="text/javascript">
+            // footer
+            $(document).ready(function() {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {
+                        $('.scrollup').fadeIn()
+                    } else {
+                        $('.scrollup').fadeOut()
+                    }
+                })
+
+                $('.scrollup').click(function() {
+                    $("html, body").animate({
+                        scrollTop: 0
+                    }, 600);
+                    return false
+                })
+            })
+        </script>
+
+        {% block footer_scripts %} {% endblock %}
+    </body>
+</html>

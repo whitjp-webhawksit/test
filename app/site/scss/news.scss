@@ -1,0 +1,49 @@
+// Divider
+.divider {
+	background: #004d89;
+
+	.top-bar {
+		display: none;
+	}
+
+	h2 {
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 60px;
+		color: #fff;
+		margin-bottom: 0;
+
+		@media only screen and (max-width:991px) {
+			font-size: 24px;
+		}
+
+	}
+
+}
+
+// News
+.news {
+	margin: 40px 0 30px;
+
+	a {
+		text-decoration: none;
+		color: #0e1112;
+	}
+
+	.items {
+		margin-bottom: 25px;
+
+		li {
+			margin-bottom: 8px;
+
+			.category {
+				display: inline-block;
+				min-width: 150px;
+				color: #004d89;
+			}
+
+		}
+
+	}
+
+}

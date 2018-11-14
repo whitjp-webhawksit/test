@@ -1,0 +1,209 @@
+{% extends "layout-inner.html" %}
+
+{% block title %}
+	Contact
+{% endblock %}
+
+{% block header_scripts %}
+	<link rel="stylesheet" type="text/css" href="/css/contact.css">
+{% endblock %}
+
+{% block content %}
+	{% import 'macros/divider.html' as divider %} {{ divider.params('お問い合わせ') }}
+	
+	<div class="container">
+		<div class="form-container">
+			<div class="form-header text-center">
+				<h5>電話でのお問い合わせの場合は、以下の番号におかけください。</h5>
+				<h2>TEL: 03-3342-6710</h2>
+				<p>受付時間 10時～18時（土・日・祝日除く）</p>
+				<hr>
+				<h5>メールでお問い合わせいただく場合は、以下の項目にご入力ください。</h5>
+				<p>（必須）と記載のある項目は必ずご入力ください。</p>
+			</div>
+
+			<div class="form">
+				<form class="form-horizontal" id="contact-form">
+					<div class="form-group row">
+						<label for="" class="col-lg-3 control-label">お問い合わせ種別 <span class="required">（必須）</span></label>
+						<div class="col-lg-9">
+							<select class="form-control" id="subject" name="subject">
+								<option disabled selected>お問い合わせ種別をお選びください</option>
+	                            <option value="調査・リサーチについてのお問合せ">調査・リサーチについてのお問い合わせ</option>
+	                            <option value="データ解析についてのお問合せ">データ解析についてのお問い合わせ</option>
+	                            <option value="データ販売についてのお問合せ">データ販売についてのお問い合わせ</option>
+	                            <option value="取材依頼のお問合せ">取材依頼のお問い合わせ</option>
+	                            <option value="業務提携のお問合せ">業務提携のお問い合わせ</option>
+	                            <option value="求人応募のお問い合わせ">求人応募のお問い合わせ</option>
+	                            <option value="その他のお問い合わせ">その他のお問い合わせ</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="company" class="col-lg-3 control-label">企業・団体名</label>
+						<div class="col-lg-9">
+							<input type="text" class="form-control" id='company' name='company' placeholder="例：インサイトテック">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="department" class="col-lg-3 control-label">部署名</label>
+						<div class="col-lg-9">
+							<input type="text" class="form-control" id="department" name="department" placeholder="例：マーケティング部">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="position" class="col-lg-3 control-label">役職</label>
+						<div class="col-lg-9">
+							<input type="text" class="form-control" id="position" name="position" placeholder="例：マネージャー">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="name" class="col-lg-3 control-label">お名前 <span class="required">（必須）</span></label>
+						<div class="col-lg-9">
+							<input type="text" class="form-control" id="name" name="name" placeholder="例：不満　太郎">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="tel" class="col-lg-3 control-label">電話番号</label>
+						<div class="col-lg-9">
+							<input type="text" class="form-control" id="tel" name="tel" placeholder="例：000-0000-0000">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="email" class="col-lg-3 control-label">メールアドレス <span class="required">（必須）</span></label>
+						<div class="col-lg-9">
+							<input type="text" class="form-control" id="email" name="email" placeholder="例：example@insight-tech.jp">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="content" class="col-lg-3 control-label">お問い合わせ内容 <span class="required">（必須）</span></label>
+						<div class="col-lg-9">
+							<textarea class="form-control" id="content" name="content" placeholder="800文字以内でご記入ください。"></textarea>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-lg-12 text-center">
+							<button type="submit">送信する</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="form-footer">
+				<hr>
+				<p>個人情報の取り扱いについて</p>
+				</p>お預かりした個人情報は以下の目的で利用いたします。</p>
+				<ul>
+					<li>当社に不満情報を販売した利用者に買取対価を支払うため</li>
+					<li>本サービスに関する登録の受付、本人確認等、本サービスの提供、維持、保護及び改善のため</li>
+					<li>本サービスの利用状況（本サービスを通じて当社以外の事業者の提供に係るサービスを利用する場合も含みます）の確認のため</li>
+					<li>本サービスの内容に関する情報、アップデート情報、イベント・キャンペーン情報、規約等の変更情報等の告知のため</li>
+					<li>本サービスに関するご案内、お問い合わせ等への対応のため</li>
+					<li>本サービスに関する当社の規約、そのほか諸規程に違反する行為への対応のため</li>
+					<li>本サービスの利用に関する統計データを制作するため</li>
+					<li>今後の本サービスに関する企画、立案または実施のため</li>
+					<li>当社または第三者の広告の配信または表示のため</li>
+					<li>キャンペーン等に当選された利用者に賞品等を発送するため</li>
+					<li>その他マーケティングに利用するため</li>
+				</ul>
+				<p>お客様の入力された内容は、当社の個人情報保護方針に基づき、適切に管理します。</p>
+				<hr>
+			</div>
+		</div>
+
+		<div class="success-content text-center mt-5 hidden">
+			<p>お問い合わせいただきありがとうございます。<br>お問い合わせ内容は自動返信メールをご確認ください。</p>
+			<p>通常3営業日以内に、<br>担当者より連絡をいたします。</p>
+            <p>4営業日経っても連絡がない場合は、大変お手数ですが、<br>再度お問い合わせを頂くか、<br>下記メールアドレスまでご連絡ください。</p>
+            
+            <p><a href="mailto:sales@insight-tech.co.jp">sales@insight-tech.co.jp</a></p>
+			<hr>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-3 mb-5 mt-5">
+				<a href="index.html"><img src="../assets/images/insighttech_logo.png" class="img-fluid"></a>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block footer_scripts %}
+	<script type="text/javascript" src="/js/jquery.validate.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#contact-form").validate({
+		        rules: {
+		            subject: {
+		                required: true
+		            },
+		            name: {
+		                required: true
+		            },
+		            email: {
+		                required: true,
+		                email: true
+		            },
+		            content: {
+		                required: true
+		            }
+		        },
+		        messages: {
+		            subject: {
+		                required: 'お問合せ種別をお選びください'
+		            },
+		            name: {
+		                required: 'お名前を入力してください'
+		            },
+		            email: {
+		                required: 'メールアドレスを入力してください',
+		                email: '正しいメールアドレスを入力してください'
+		            },
+		            content: {
+		                required: 'お問合せ内容を入力してください'
+		            }
+		        },
+		        submitHandler: function(form) {
+		            var formData = {
+		                'ticket': {
+		                    'subject': $('#subject').val(),
+		                    'comment': {
+		                        'body': 'お問合せ種別 ：' + $('#subject').val() + '\n' +
+		                            '企業・団体名：' + $('#company').val() + '\n' +
+		                            '部署名：' + $('#department').val() + '\n' +
+		                            '役職：' + $('#position').val() + '\n' +
+		                            '電話番号：' + $('#tel').val() + '\n' +
+		                            'メールアドレス:' + $('#email').val() + '\n\n' +
+		                            'お問合せ内容：' + $('#content').val()
+		                    },
+		                    'requester': {
+		                        'name': $('#name').val(),
+		                        'email': $('#email').val()
+		                    },
+		                    'recipient': 'support@fumankaitori.zendesk.com'
+		                }
+		            }
+		            
+		            var basic_auth = 'masami_toyoshima@fumankaitori.com/token:icTMTrNivlSWDdlCDzRZH5EUsiow1nSId29cqFtl'
+		            
+		            $.ajax({
+	                    url: 'https://fumankaitori.zendesk.com/api/v2/tickets.json',
+	                    type: 'POST',
+	                    contentType: 'application/json',
+	                    dataType: 'json',
+	                    cors: true,
+	                    beforeSend: function(xhr) {
+	                        xhr.setRequestHeader('Authorization', 'Basic ' + btoa(basic_auth))
+	                    },
+	                    data: JSON.stringify(formData)
+	                }).always(function(data) {
+	                    $('.form-container').addClass('hidden')
+	                    $('.success-content').removeClass('hidden')
+	                })
+
+		            return false
+		        }
+		    })
+		})
+	</script>
+{% endblock %}

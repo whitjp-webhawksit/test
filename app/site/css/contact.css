@@ -1,0 +1,103 @@
+.hidden {
+  display: none; }
+
+.divider {
+  background: #004d89; }
+  .divider .top-bar {
+    display: none; }
+  .divider h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 60px;
+    color: #fff;
+    margin-bottom: 0; }
+    @media only screen and (max-width: 991px) {
+      .divider h2 {
+        font-size: 24px; } }
+    @media only screen and (max-width: 767px) {
+      .divider h2 {
+        font-size: 20px; } }
+
+.form-header {
+  margin: 40px 0 80px; }
+  .form-header h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #004d89; }
+    @media only screen and (max-width: 767px) {
+      .form-header h2 {
+        font-size: 32px; } }
+    @media only screen and (max-width: 375px) {
+      .form-header h2 {
+        font-size: 28px; } }
+  .form-header h5 {
+    font-size: 20px;
+    font-weight: 700; }
+    @media only screen and (max-width: 767px) {
+      .form-header h5 {
+        font-size: 16px; } }
+  @media only screen and (max-width: 767px) {
+    .form-header p {
+      font-size: 14px; } }
+  .form-header hr {
+    margin: 40px 0 30px; }
+
+.form .form-group {
+  margin-bottom: 30px; }
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"],
+.form textarea,
+.form select {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  background: #F0F0F0;
+  border: 1px solid #707070;
+  margin-bottom: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0; }
+  .form input[type="text"]:focus, .form input[type="text"]:active,
+  .form input[type="email"]:focus,
+  .form input[type="email"]:active,
+  .form input[type="password"]:focus,
+  .form input[type="password"]:active,
+  .form textarea:focus,
+  .form textarea:active,
+  .form select:focus,
+  .form select:active {
+    border: 1px solid #707070;
+    box-shadow: none;
+    outline: none; }
+
+.form textarea {
+  height: 240px; }
+
+.form button {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #fff;
+  background: #000;
+  padding: 0 80px;
+  margin-bottom: 45px; }
+  @media only screen and (max-width: 767px) {
+    .form button {
+      font-size: 14px;
+      margin-bottom: 35px; } }
+
+.form .control-label {
+  font-weight: 700;
+  line-height: 50px; }
+  @media only screen and (max-width: 767px) {
+    .form .control-label {
+      line-height: 24px; } }
+
+.form label.error {
+  color: #dd102d; }
+
+.form-footer {
+  margin-bottom: 40px; }
+  .form-footer ul {
+    padding-left: 18px; }

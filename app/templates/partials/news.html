@@ -1,0 +1,13 @@
+<section class="news">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2">
+				<h2 class="title text-center">ニュース</h2>
+
+				{% import 'macros/news.html' as news %} {{ news.params([{category: 'ニュース', 'date': '2018.07.11', 'content': '8月1日～開催の「第3回データ分析ハッカソン（データ分析バーチャル・ハッカソン2018）」へ弊 社データを提供いたします', 'link': '#'}, {category: 'ニュース', 'date': '2018.07.05', 'content': 'ライオン株式会社が提供する「口臭ケアサポートアプリ」を開発支援', 'link': '#'}, {category: 'コラム', 'date': '2018.07.05', 'content': '不満買取センターに投稿される声', 'link': '#'}]) }}
+
+				<p class="text-center"><a href="news.html" class="btn">過去のニュースを見る</a></p>
+			</div>
+		</div>
+	</div>
+</section>

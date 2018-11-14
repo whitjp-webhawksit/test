@@ -1,0 +1,29 @@
+{% extends "layout-inner.html" %}
+
+{% block title %}
+	News
+{% endblock %}
+
+{% block header_scripts %}
+	<link rel="stylesheet" type="text/css" href="/css/news.css">
+{% endblock %}
+
+{% block content %}
+	{% import 'macros/divider.html' as divider %} {{ divider.params('ニュース・お知らせ一覧') }}
+	
+	<div class="container">
+		<div class="news">
+			<ul class="items list-unstyled">
+				{% for item in news %}
+					<li><a href="{{ item.link }}"><span class="category">{{ item.category }}</span> <span>{{ item.date }}</span> {{ item.content }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-3 mb-5 mt-5">
+				<a href="index.html"><img src="../assets/images/insighttech_logo.png" class="img-fluid"></a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

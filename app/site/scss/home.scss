@@ -1,0 +1,984 @@
+// owl carousel
+.owl-dots {
+	position: absolute;
+	top: 22px;
+	right: 20px;
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel button.owl-dot {
+	display: inline-block;
+	background: #b8b9b3;
+	width: 10px;
+	height: 10px;
+	margin: 0 3px;
+
+	&.active {
+		background: #000;
+	}
+
+}
+
+.text-shrinked {
+	letter-spacing: -1px;
+}
+
+// Banner
+.home-banner {
+	position: relative;
+	height: 520px;
+
+	@media only screen and (max-width:768px) {
+		height: 340px;
+	}
+
+	@media only screen and (max-width:575px) {
+		height: 320px;
+	}
+
+	.intro {
+		position: absolute;
+		top: 25px;
+		left: 0;
+		right: 0;
+
+		h4 {
+			font-size: 14px;
+			color: #fff;
+			margin-bottom: 5px;
+
+			@media only screen and (max-width:700px) {
+				font-size: 13px;
+			}
+		}
+
+		a {
+			font-size: 16px;
+			color: #fff;
+			line-height: 45px;
+			background: #008bc2;
+			padding: 0;
+			width: 100%;
+
+			@media only screen and (max-width:700px) {
+				font-size: 14px;
+				line-height: 40px;
+			}
+
+			@media only screen and (max-width:375px) {
+				font-size: 12px;
+				line-height: 30px;
+			}
+		}
+
+		.logo-wrap {
+			line-height: 70px;
+		}
+
+	}
+
+	.overlay {
+		position: absolute;
+		top: 205px;
+		left: 0;
+		right: 0;
+		padding: 5px 0;
+		background: rgba(0, 0, 0, 0.5);
+
+		@media only screen and (max-width:768px) {
+			top: 120px;
+		}
+
+		h2 {
+			font-size: 32px;
+			font-weight: 600;
+			line-height: 44px;
+			color: #fff;
+			margin-bottom: 0;
+
+			@media only screen and (max-width:700px) {
+				font-size: 22px;
+				line-height: 34px;
+			}
+
+			@media only screen and (max-width:575px) {
+				font-size: 16px;
+				line-height: 28px;
+			}
+
+			@media only screen and (max-width:375px) {
+				font-size: 14px;
+			}
+
+		}
+
+		.logo-wrap {
+			line-height: 88px;
+		}
+
+	}
+
+	.icon {
+		position: absolute;
+		bottom: -15px;
+		left: 0;
+		right: 0;
+	}
+
+}
+
+// News
+.news {
+	margin: 25px 0 20px;
+
+	a {
+		text-decoration: none;
+		color: #0e1112;
+	}
+
+	.title {
+		font-size: 20px;
+		font-weight: 600;
+		color: #b8b9b3;
+		margin-bottom: 20px;
+	}
+
+	.items {
+		margin-bottom: 25px;
+
+		li {
+			margin-bottom: 8px;
+
+			.category {
+				font-weight: 700;
+				color: #004d89;
+			}
+
+		}
+
+	}
+
+	.btn {
+		background: #000;
+		font-weight: 700;
+		line-height: 28px;
+		color: #fff;
+		padding: 0 40px;
+	}
+
+}
+
+// Articles
+.articles {
+	position: relative;
+	padding: 25px 0 0;
+
+	.title {
+		font-size: 20px;
+		font-weight: 600;
+		color: #fff;
+		margin-bottom: 22px;
+
+		@media only screen and (max-width:575px) {
+			font-size: 16px;
+		}
+	}
+
+	.items {
+		width: 100%;
+		margin-bottom: 0;
+		padding-bottom: 15px;
+		min-height: 156px;
+		text-align: center;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		li {
+			position: relative;
+			display: inline-grid;
+			width: calc(25% - 14px);
+			background: #fff;
+			padding: 55px 15px 25px;
+			margin-left: 7px;
+			margin-right: 7px;
+			margin-bottom: 15px;
+
+			@media only screen and (max-width:991px) {
+				width: calc(50% - 14px);
+			}
+
+			@media only screen and (min-width:991px) and (max-width: 1199px) {
+				min-height: 188px;
+			}
+
+			@media only screen and (max-width:575px) {
+				padding: 35px 10px 20px;
+			}
+
+			span {
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: #004d89;
+				font-size: 11px;
+				color: #b8b9b3;
+				padding: 2px 8px;
+			}
+
+			h4 {
+				font-size: 14px;
+				margin-bottom: 12px;
+			}
+
+			p {
+				font-size: 11px;
+				margin-bottom: 0;
+			}
+
+		}
+
+	}
+
+}
+
+// Divider
+.divider {
+	position: relative;
+	width: 100%;
+	height: 115px;
+	background: url('../assets/images/footer-banner.png');
+	background-position: 50% 40%;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.top-bar {
+		width: 100%;
+		height: 15px;
+		background: #008bc2;
+		background: -moz-linear-gradient(left, #008bc2 0%, #ffffff 50%, #008bc2 100%);
+		background: -webkit-linear-gradient(left, #008bc2 0%, #ffffff 50%, #008bc2 100%);
+		background: linear-gradient(to right, #008bc2 0%, #ffffff 50%, #008bc2 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008bc2', endColorstr='#008bc2', GradientType=1);
+	}
+
+	.divider-parallax-container {
+		height: 100px;
+	}
+
+	.title-wrap {
+		display: table;
+		width: 100%;
+		height: 100px;
+	}
+
+	h2 {
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 1.2;
+		color: #fff;
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0 10px;
+		margin-bottom: 0;
+
+		@media only screen and (max-width:991px) {
+			font-size: 24px;
+		}
+
+		@media only screen and (max-width:767px) {
+			font-size: 22px;
+		}
+
+		@media only screen and (max-width:375px) {
+			font-size: 18px;
+		}
+
+	}
+
+}
+
+// The Power
+.itas {
+	position: relative;
+	padding: 25px 0;
+
+	.intro {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 24px;
+		margin-top: 20px;
+		margin-bottom: 30px;
+
+		@media only screen and (max-width:375px) {
+			font-size: 13px;
+		}
+	}
+
+	.item {
+		position: relative;
+		break-inside: avoid-column;
+		-webkit-column-break-inside: avoid;
+		margin-bottom: 25px;
+		overflow: visible;
+
+		.item-container {
+			position: absolute;
+			overflow: hidden;
+			top: 0;
+			left: 0;
+			right: 0;
+			background: rgba(255, 255, 255, 0.6);
+			border: 1px solid #707070;
+			padding: 50px 70px 70px;
+			border-top-right-radius: 15px;
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+			-webkit-transition: max-height 800ms;
+			transition: max-height 800ms;
+
+			&:before {
+				content: url('../assets/images/power-edge.png');
+				position: absolute;
+				top: 0;
+				left: 0
+			}
+
+			@media only screen and (max-width:991px) {
+				padding: 40px;
+			}
+
+			@media only screen and (max-width:768px) {
+				padding: 25px;
+			}
+
+			@media only screen and (max-width:375px) {
+				padding: 15px;
+			}
+
+			&.reverse {
+				@media only screen and (min-width:992px) {
+					bottom: 0;
+					top: auto;
+				}
+			}
+
+			.step-two {
+				button {
+					font-size: 14px;
+					font-weight: 700;
+					line-height: 40px;
+					color: #fff;
+					background: #000;
+					padding: 0;
+					width: 100%;
+					-webkit-border-radius: 0;
+					border-radius: 0;
+					margin-bottom: 0;
+
+					@media only screen and (max-width:991px) {
+						font-size: 12px;
+					}
+				}
+
+			}
+
+			&.active {
+				background: #fff;
+				max-height: 999px !important;
+				z-index: 9;
+			}
+
+			&.working {
+				background: #fff;
+				z-index: 9;
+			}
+
+			button {
+				font-size: 16px;
+				font-weight: 700;
+				line-height: 40px;
+				color: #fff;
+				background: #004d89;
+				padding: 0;
+				margin-bottom: 45px;
+				width: auto;
+				min-width: 210px;
+
+				&.btn-black {
+					background: #000;
+				}
+
+				@media only screen and (max-width:375px) {
+					font-size: 14px;
+					line-height: 35px;
+					margin-bottom: 30px;
+				}
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 24px;
+				margin-bottom: 0;
+
+				@media only screen and (max-width:375px) {
+					font-size: 14px;
+				}
+			}
+
+		}
+
+	}
+
+}
+
+// Dissatisfaction Data
+.dissatisfaction-data {
+	position: relative;
+	padding: 20px 0;
+
+	.intro {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 24px;
+		letter-spacing: -1px;
+		margin-bottom: 50px;
+
+		@media only screen and (max-width:375px) {
+			font-size: 13px;
+			margin-bottom: 35px;
+		}
+	}
+
+	.intro-2 {
+		margin-bottom: 30px;
+
+		img {
+			float: left;
+			display: inline-block;
+			max-width: 65px;
+			margin-right: 15px;
+
+			@media only screen and (max-width:575px) {
+				max-width: 50px;
+				margin-right: 10px;
+			}
+
+			@media only screen and (max-width:375px) {
+				max-width: 35px;
+				margin-right: 5px;
+			}
+
+		}
+
+		p {
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 24px;
+			margin-top: 5px;
+			margin-bottom: 0;
+
+			@media only screen and (max-width:1199px) {
+				font-size: 14px;
+			}
+
+			@media only screen and (max-width:575px) {
+				font-size: 12px;
+				line-height: 16px;
+			}
+
+			@media only screen and (max-width:375px) {
+				font-size: 10px;
+				line-height: 14px;
+			}
+
+		}
+
+		.count {
+			font-size: 60px;
+			font-weight: 700;
+			line-height: 1;
+			color: #004d89;
+
+			@media only screen and (max-width:1199px) {
+				font-size: 52px;
+			}
+
+			@media only screen and (max-width:991px) {
+				font-size: 44px;
+			}
+
+			@media only screen and (max-width:575px) {
+				font-size: 34px;
+			}
+
+			@media only screen and (max-width:375px) {
+				font-size: 28px;
+			}
+
+		}
+
+		.m {
+			font-size: 30px;
+			margin-left: 15px;
+
+			@media only screen and (max-width:1199px) {
+				font-size: 26px;
+			}
+
+			@media only screen and (max-width:991px) {
+				font-size: 22px;
+			}
+
+			@media only screen and (max-width:575px) {
+				font-size: 18px;
+				margin-left: 5px;
+			}
+
+			@media only screen and (max-width:375px) {
+				font-size: 14px;
+			}
+
+		}
+
+	}
+
+	.items {
+		width: 100%;
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+		-webkit-column-gap: 15px;
+		-moz-column-gap: 15px;
+		column-gap: 15px;
+		margin-bottom: 10px;
+
+		@media only screen and (max-width:991px) {
+			-webkit-column-count: 1;
+			-moz-column-count: 1;
+			column-count: 1;
+		}
+
+		li {
+			position: relative;
+			background: rgba(255, 255, 255, 0.5);
+			border: 1px solid #707070;
+			padding: 50px 80px;
+			margin-bottom: 15px;
+			border-top-right-radius: 15px;
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+			break-inside: avoid-column;
+			-webkit-column-break-inside: avoid;
+
+			@media only screen and (max-width:1199px) {
+				padding: 50px;
+			}
+
+			@media only screen and (max-width:991px) {
+				padding: 40px;
+			}
+
+			@media only screen and (max-width:768px) {
+				padding: 25px;
+			}
+
+			@media only screen and (max-width:575px) {
+				padding: 25px 20px;
+			}
+
+			@media only screen and (max-width:375px) {
+				padding: 20px 12px;
+			}
+
+			&:before {
+				content: url('../assets/images/power-edge.png');
+				position: absolute;
+				top: 0;
+				left: 0
+			}
+
+			h3 {
+				font-size: 16px;
+				font-weight: 700;
+				line-height: 40px;
+				color: #fff;
+				background: #004d89;
+				padding: 0;
+				margin-bottom: 40px;
+				-webkit-border-radius: 20px;
+				border-radius: 20px;
+
+				@media only screen and (max-width:768px) {
+					font-size: 14px;
+				}
+				@media only screen and (max-width:768px) {
+					font-size: 13px;
+				}
+
+				@media only screen and (max-width:375px) {
+					font-size: 11px;
+				}
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 24px;
+				margin-bottom: 20px;
+
+				@media only screen and (max-width:768px) {
+					font-size: 14px;
+				}
+				@media only screen and (max-width:768px) {
+					font-size: 13px;
+				}
+			}
+
+		}
+
+	}
+
+	.text-shrinked {
+		font-size: 14px;
+	}
+
+}
+
+// Academia Collaboration
+.academia-collaboration {
+	position: relative;
+	padding: 20px 0 40px;
+
+	.intro {
+		font-size: 15px;
+		font-weight: 700;
+		line-height: 24px;
+		margin-bottom: 60px;
+
+		@media only screen and (max-width:768px) {
+			font-size: 13px;
+			margin-bottom: 40px;
+		}
+	}
+
+	.items {
+		width: 100%;
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+		-webkit-column-gap: 15px;
+		-moz-column-gap: 15px;
+		column-gap: 15px;
+		margin-bottom: 25px;
+
+		@media only screen and (max-width:991px) {
+			-webkit-column-count: 1;
+			-moz-column-count: 1;
+			column-count: 1;
+		}
+
+		@media only screen and (max-width:700px) {
+			margin-bottom: 10px;
+		}
+
+		> li {
+			position: relative;
+			background: rgba(255, 255, 255, 0.5);
+			border: 1px solid #707070;
+			padding: 70px 50px;
+			margin-bottom: 15px;
+			border-top-right-radius: 15px;
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+			break-inside: avoid-column;
+			-webkit-column-break-inside: avoid;
+
+			@media only screen and (max-width:1199px) {
+				padding: 50px 40px;
+			}
+
+			@media only screen and (max-width:767px) {
+				padding: 30px;
+			}
+
+			@media only screen and (max-width:375px) {
+				padding: 20px 15px;
+			}
+
+			&:before {
+				content: url('../assets/images/power-edge.png');
+				position: absolute;
+				top: 0;
+				left: 0
+			}
+
+			.mb-0 img {
+				margin-bottom: 40px;
+			}
+
+			h5 {
+				font-size: 16px;
+				line-height: 24px;
+				margin-bottom: 35px;
+
+				@media only screen and (max-width:375px) {
+					font-size: 14px;
+					margin-bottom: 25px;
+				}
+			}
+
+			p {
+				font-size: 14px;
+				line-height: 24px;
+				letter-spacing: -0.02px;
+				margin-bottom: 30px;
+
+				@media only screen and (max-width:375px) {
+					font-size: 13px;
+					margin-bottom: 25px;
+				}
+			}
+
+		}
+
+	}
+
+}
+
+// Case Study
+.case-study {
+	position: relative;
+	padding: 20px 0 40px;
+
+	@media only screen and (max-width:991px) {
+		background: none;
+	}
+
+	.intro {
+		font-size: 15px;
+		font-weight: 700;
+		line-height: 24px;
+		margin-bottom: 60px;
+
+		@media only screen and (max-width:375px) {
+			font-size: 13px;
+			margin-bottom: 40px;
+		}
+	}
+
+	#slide-one, #slide-two {
+		position: relative;
+		background: #fff;
+		border: 1px solid #707070;
+		padding: 50px 40px 40px;
+		margin-bottom: 15px;
+		border-top-right-radius: 15px;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		width: 100%;
+
+		@media only screen and (max-width:1199px) {
+			min-height: 520px;
+		}
+
+		@media only screen and (max-width:991px) {
+			min-height: auto;
+		}
+
+		@media only screen and (max-width:767px) {
+			padding: 50px 30px 30px;
+		}
+
+		@media only screen and (max-width:375px) {
+			padding: 50px 20px 25px;
+		}
+
+		&:before {
+			content: url('../assets/images/power-edge.png');
+			position: absolute;
+			top: 0;
+			left: 0
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 22px;
+			margin-bottom: 20px;
+
+			@media only screen and (max-width:375px) {
+				font-size: 13px;
+			}
+		}
+
+	}
+
+	.items {
+		position: relative;
+		background: #fff;
+		border: 1px solid #707070;
+		border-top-right-radius: 15px;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+		margin-bottom: 15px;
+		width: 100%;
+
+		&:before {
+			content: url('../assets/images/power-edge.png');
+			position: absolute;
+			top: 0;
+			left: 0
+		}
+
+		h4 {
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 24px;
+			margin-bottom: 30px;
+
+			@media only screen and (max-width:375px) {
+				font-size: 14px;
+			}
+		}
+
+		> li {
+			padding: 25px 20px 25px;
+
+			@media only screen and (max-width:375px) {
+				padding: 20px 15px;
+			}
+
+		}
+
+		img {
+			display: inline-block;
+			margin-bottom: 30px;
+		}
+
+	}
+
+	.text-shrinked {
+		font-size: 14px;
+	}
+
+}
+
+.team {
+	position: relative;
+	padding: 20px 0;
+
+	@media only screen and (max-width:991px) {
+		background: none;
+	}
+
+	.intro {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 24px;
+		margin-bottom: 100px;
+
+		@media only screen and (max-width:767px) {
+			margin-bottom: 50px;
+		}
+
+		@media only screen and (max-width:375px) {
+			font-size: 14px;
+			margin-bottom: 30px;
+		}
+
+		&.small {
+			font-size: 14px;
+
+			@media only screen and (max-width:375px) {
+				font-size: 12px;
+			}
+		}
+
+	}
+
+	.president {
+		margin-bottom: 60px;
+
+		@media only screen and (min-width:992px) {
+			.col-lg-4 {
+				padding: 0;
+			}
+
+		}
+
+		@media only screen and (max-width:767px) {
+			margin-bottom: 40px;
+		}
+
+		p {
+			font-size: 16px;
+
+			&.small {
+				font-size: 14px;
+			}
+
+			@media only screen and (max-width:375px) {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.members {
+		margin-top: 80px;
+		margin-bottom: 20px;
+
+		@media only screen and (min-width:992px) {
+			.col-lg-3 {
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+
+		}
+
+
+		@media only screen and (max-width:767px) {
+			margin-top: 40px;
+		}
+
+		img {
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-size: 14px;
+			margin-bottom: 35px;
+
+			&.nd {
+				font-size: 16px;
+			}
+
+			@media only screen and (max-width:375px) {
+				font-size: 14px;
+				margin-bottom: 25px;
+			}
+		}
+
+	}
+
+}
+
+.company-profile {
+	padding: 20px 0 25px;
+
+	.intro {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 24px;
+		letter-spacing: -1px;
+		margin-bottom: 40px;
+
+		@media only screen and (max-width:375px) {
+			font-size: 14px;
+			line-height: 22px;
+			margin-bottom: 30px;
+		}
+	}
+
+}

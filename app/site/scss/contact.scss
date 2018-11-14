@@ -1,0 +1,139 @@
+.hidden {
+	display: none;
+}
+
+// Divider
+.divider {
+	background: #004d89;
+
+	.top-bar {
+		display: none;
+	}
+
+	h2 {
+		font-size: 32px;
+		font-weight: 700;
+		line-height: 60px;
+		color: #fff;
+		margin-bottom: 0;
+
+		@media only screen and (max-width:991px) {
+			font-size: 24px;
+		}
+
+		@media only screen and (max-width:767px) {
+			font-size: 20px;
+		}
+
+	}
+
+}
+
+.form-header {
+	margin: 40px 0 80px;
+
+	h2 {
+		font-size: 40px;
+		font-weight: 700;
+		color: #004d89;
+
+		@media only screen and (max-width:767px) {
+			font-size: 32px;
+		}
+
+		@media only screen and (max-width:375px) {
+			font-size: 28px;
+		}
+	}
+
+
+	h5 {
+		font-size: 20px;
+		font-weight: 700;
+
+		@media only screen and (max-width:767px) {
+			font-size: 16px;
+		}
+	}
+
+	p {
+		@media only screen and (max-width:767px) {
+			font-size: 14px;
+		}	
+	}
+
+	hr {
+		margin: 40px 0 30px;
+	}
+
+}
+
+.form {
+	.form-group {
+		margin-bottom: 30px;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	textarea,
+	select {
+		width: 100%;
+		height: 50px;
+		padding: 10px;
+		background: #F0F0F0;
+		border: 1px solid #707070;
+		margin-bottom: 0;
+		-webkit-border-radius: 0;
+		border-radius: 0;
+
+		&:focus,
+		&:active {
+			border: 1px solid #707070;
+			box-shadow: none;
+			outline: none;
+		}
+
+	}
+
+	textarea {
+		height: 240px;
+	}
+
+	button {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 40px;
+		color: #fff;
+		background: #000;
+		padding: 0 80px;
+		margin-bottom: 45px;
+
+		@media only screen and (max-width:767px) {
+			font-size: 14px;
+			margin-bottom: 35px;
+		}
+	}
+
+	.control-label {
+		font-weight: 700;
+		line-height: 50px;
+
+		@media only screen and (max-width:767px) {
+			line-height: 24px;
+		}
+	}
+
+	label.error {
+		color: #dd102d;
+	}
+
+}
+
+.form-footer {
+	margin-bottom: 40px;
+
+	ul {
+		padding-left: 18px;
+	}
+}
